@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易留言板</title>
+    <script language="javascript" src="message.js"></script>
+    <style type="text/css">
+        body{margin: 0 auto;text-align: center;}
+        textarea{resize: none}
+        input{font-size: 20px;}
+    </style>
+</head>
+<body>
+<textarea id="dome" rows="20" cols="40"></textarea>
+<br>
+<input type="button" value="保存" onclick = saveStorage('dome')>
+<input type="button" value="清除" onclick = clearStorage('dome')>
+<input type="button" value="读取" onclick = loadStorage('dome')>
+<p id="msg"></p>
+</body>
+</html>
