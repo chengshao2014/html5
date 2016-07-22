@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://files.cnblogs.com/rubylouvre/jquery1.83.js" > </script> 
+    </head>
+    <body>
+        <div class="container">
+
+	<header class="codrops-header">
+		<nav class="codrops-demos">
+			<a class="current-demo" href="javascript:void(0);" onclick="return btnclick()">Login/Signup</a>
+		</nav>
+	</header>
+        <section id="sec" style="display:none;width:30%;height:200px;background:#ccc;margin:0 auto;">
+		
+		<div class="mockup-content">
+			<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+				<div class="morph-content">
+					<div>
+						<div class="content-style-form content-style-form-1">
+							<span class="icon icon-close">Close the dialog</span>
+							<h2>Login</h2>
+							<form>
+								<p><label>Email</label><input type="text" /></p>
+								<!--<p><label>Password</label><input type="password" /></p>-->
+								<p><button>Login</button></p>
+                                                                <p><button onclick="return btnClose();">close</button></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div><!-- morph-button -->
+                </div>
+        </section>
+        </div>
+        <script language="javascript">
+        function btnclick()
+        {
+            var Idiv = document.getElementById("sec");
+            Idiv.style.left = (document.documentElement.clientWidth-Idiv.clientWidth)/2+document.documentElement.scrollLeft+"px";
+            Idiv.style.top =(document.documentElement.clientHeight-Idiv.clientHeight)/2+document.documentElement.scrollTop-50+"px";
+            Idiv.style.display = "block";
+            Idiv.style.zIndex = "1001";
+//            var procbg = document.createElement("div"); //首先创建一个div
+//            procbg.setAttribute("id","mybg"); //定义该div的id
+//            procbg.style.background = "#000000";
+//            procbg.style.width = "100%";
+//            procbg.style.height = "100%";
+//            procbg.style.position = "fixed";
+//            procbg.style.top = "0";
+//            procbg.style.left = "0";
+//            procbg.style.zIndex = "500";
+//            procbg.style.opacity = "0.6";
+//            procbg.style.filter = "Alpha(opacity=70)";
+//            document.body.appendChild(procbg);
+//            document.body.style.overflow = "hidden"; //取消滚动条
+        }
+        
+        function btnClose()
+        {
+            var Idiv = document.getElementById("sec");
+            Idiv.style.display="none";
+            return false;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jQuery-v1.7.2"></script>
+        <script language="javascript">
+         var t="{'firstName': 'cyra', 'lastName': 'richardson', 'address': { 'streetAddress': '1 Microsoft way', 'city': 'Redmond', 'state': 'WA', 'postalCode': 98052 },'phoneNumbers': [ '425-777-7777','206-777-7777' ] }";   
+        var jsonobj=eval('('+t+')');  
+        alert(jsonobj.firstName);   
+        alert(jsonobj.address.streetAddress);  
+        </script>
+    </head>
+    
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
